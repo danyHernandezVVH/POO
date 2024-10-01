@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Card Counting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blackjack Card Counting</h1>
+        <div class="card-input">
+            <label for="cards">Enter cards (separated by commas):</label>
+            <input type="text" id="cards" placeholder="e.g. 2, 3, K, A, 10">
+            <button onclick="countCards()">Count Cards</button>
+        </div>
+        <div class="result">
+            <h2>Result:</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+document.getElementById:
+
+document.getElementById es una función en JavaScript que se utiliza para obtener una referencia a un elemento HTML en el documento a través de su atributo id.
+Funciona tomando el valor del id como argumento y devolviendo un objeto que representa el elemento HTML con ese id. Esto permite acceder y manipular ese elemento a 
+través de JavaScript.
+Por ejemplo, en el código proporcionado, document.getElementById("resultado") se utiliza para obtener una referencia al elemento HTML con el id "resultado" en el documento.
+
+.innerHTML:
+
+innerHTML es una propiedad de los elementos HTML que se puede acceder y modificar a través de JavaScript.
+Esta propiedad permite obtener o establecer el contenido HTML de un elemento. Cuando se utiliza para obtener el contenido (element.innerHTML), 
+devuelve el HTML contenido dentro del elemento.
+Cuando se utiliza para establecer el contenido (element.innerHTML = "nuevo contenido"), permite cambiar el contenido HTML del elemento por 
+el nuevo valor proporcionado como una cadena.
+En el código, se utiliza resultadoElement.innerHTML para agregar o mostrar contenido HTML en el elemento con el id "resultado".
+
+.forEach:
+
+.forEach es un método que se utiliza con arreglos en JavaScript para recorrer cada elemento del arreglo y aplicar una función a cada uno de ellos.
+La función proporcionada como argumento a .forEach se ejecuta una vez para cada elemento en el arreglo, y ese elemento se pasa como argumento a la función.
+Es especialmente útil para recorrer y realizar operaciones en arreglos sin necesidad de utilizar bucles for o while.
+En el código, calificaciones.forEach(function(fila) { ... }) se utiliza para recorrer cada fila en la matriz calificaciones y aplicar una función que agrega 
+el contenido HTML de cada fila al elemento "resultado" para mostrar la matriz original.

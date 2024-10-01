@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: solid black 1px;
+}
+
+/* Define la fuente principal para todo el contenido y establece un fondo gris claro para la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Centra el contenido dentro de un contenedor de ancho fijo de 1000px */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo del encabezado superior. Aplica un fondo gris claro, un alto fijo, y distribuye sus elementos usando flexbox */
+.top {
+    background-color: #ccc;
+    height: 60px;
+    padding: 20px;
+    display: flex; /* Activa el modo flexbox para los elementos internos */
+    justify-content: space-between; /* Distribuye los elementos dentro de .top con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
+/* Estilo del título */
+.title {
+    font-size: 3.2rem;
+}
+
+/* Estilo del cuadro de búsqueda con flex para estirarse */
+.search {
+    flex: 1; /* Permite que este elemento crezca y ocupe el máximo espacio disponible */
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin: 0 100px; /* Añade un margen lateral para separarlo de otros elementos */
+}
+
+/* Estilo del botón */
+.btn {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000; /* Sombra para dar efecto de relieve */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+}
+
+/* Modificación de estilo específica para el botón de login */
+.login {
+    background-color: #2b78e4; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Clase que define una fila flexible */
+.row { 
+    display: flex; /* Activa flexbox para organizar los elementos en una fila horizontal */
+}
+
+/* Elemento que ocupa el doble de espacio que otros elementos en la misma fila */
+.flex-2 { 
+    flex: 2; /* Este elemento ocupará 2 partes de la fila */
+}
+
+/* Elemento que ocupa una parte de la fila */
+.flex-1 { 
+    flex: 1; /* Ocupa 1 parte de la fila */
+    margin-left: 30px; /* Separa el elemento del anterior con un margen izquierdo */
+}
+
+/* Caja básica con fondo blanco y borde */
+.box {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border: 2px solid #999;
+}
+
+/* Contenedor flexible para definir el layout de una "definición", con el contenido distribuido entre izquierda y texto */
+.definition {
+    display: flex; /* Activa flexbox para organizar los elementos de .definition */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Deja espacio entre los elementos */
+}
+
+/* Contenedor que alineará el contenido centrado */
+.left {
+    flex: 1; /* Este elemento ocupará 1 parte de espacio en relación con el resto */
+    text-align: center; /* Centra el texto y otros contenidos horizontalmente */
+}
+
+/* Párrafos dentro del contenedor .left */
+.left p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Clase para el botón "me gusta" */
+.like {
+    background-color: #ffd966; /* Fondo amarillo */
+}
+
+/* Texto principal de la definición */
+.definition-text {
+    flex: 3; /* Este elemento ocupará 3 partes del espacio, dándole más área que .left */
+    margin-left: 20px; /* Espacio entre el texto y la parte izquierda */
+    font-size: 1.4rem;
+}
+
+/* Título dentro de .box */
+.box h2 {
+    font-size: 1.7rem;
+}
+
+/* Botón para agregar elementos, ocupa todo el ancho */
+.add {
+    background-color: #93c47d;
+    width: 100%;
+    margin-top: 20px;
+}

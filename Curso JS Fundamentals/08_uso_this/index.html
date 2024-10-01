@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva</title>
+    <style>
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .task {
+            list-style: none;
+            margin: 10px 0;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+        .description {
+            display: none;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.5em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería Interactiva de Imágenes</h1>
+    <div class="image-container">
+        <img src="image1.jpg" alt="Imagen 1" onclick="changeImage(this)">
+        <button onclick="showDescription(this)">Descripción</button>
+        <p class="description">Descripción de la imagen 1</p>
+    </div>
+    <div class="image-container">
+        <img src="image2.jpg" alt="Imagen 2" onclick="changeImage(this)">
+        <button onclick="showDescription(this)">Descripción</button>
+        <p class="description">Descripción de la imagen 2</p>
+    </div>
+    
+    <h2>Lista de Tareas</h2>
+    <ul id="taskList">
+        <li class="task">
+            <span>Tarea 1</span>
+            <button onclick="completeTask(this)">Completar</button>
+        </li>
+        <li class="task">
+            <span>Tarea 2</span>
+            <button onclick="completeTask(this)">Completar</button>
+        </li>
+    </ul>
+
+    <h2>Productos</h2>
+    <div class="product-card">
+        <h2>Producto 1</h2>
+        <p class="price">$100.00</p>
+        <button onclick="applyDiscount(this)">Aplicar descuento</button>
+    </div>
+    <div class="product-card">
+        <h2>Producto 2</h2>
+        <p class="price">$150.00</p>
+        <button onclick="applyDiscount(this)">Aplicar descuento</button>
+    </div>
+    <div class="product-card">
+        <h2>Producto 3</h2>
+        <p class="price">$200.00</p>
+        <button onclick="applyDiscount(this)">Aplicar descuento</button>
+    </div>
+</body>
+<script>
+    // Lección 6: Usar 'this' para cambiar texto y atributos
+    function changeImage(element) {
+        element.src = 'newImage.jpg';
+        element.alt = 'Nueva Imagen';
+    }
+    // Lección 7: Usar 'this' para mostrar descripciones
+    function showDescription(button) {
+        let description = button.nextElementSibling;
+        description.style.display = description.style.display === 'block' ? 'none' : 'block';
+    }
+    // Lección 8: Usar 'this' para cambiar estilos
+    function completeTask(button) {
+        let taskItem = button.parentElement;
+        let taskText = taskItem.querySelector('span');
+        taskText.classList.toggle('completed');
+    }
+    // Lección 9 y 10: Interacciones más complejas
+    function applyDiscount(button) {
+        let productCard = button.parentElement;
+        let priceElement = productCard.querySelector('.price');
+        let currentPrice = parseFloat(priceElement.textContent.replace('$', ''));
+        let newPrice = (currentPrice * 0.9).toFixed(2);
+        priceElement.textContent = `$${newPrice}`;
+    }
+</script>
+</html>
